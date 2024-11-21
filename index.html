@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <button id="btn-hamburguesa"><img src="imagenes/pngwing.com.png" alt=""></button>
+    <h1>Taskmgr</h1>
+    <div id="menu-desplegable" style="display: none;">
+      <ul>
+        <li id="crear-publicacion">Crear Publicación</li>
+        <li id="configuracion">Configuración</li>
+      </ul>
+    </div>
+  </header>
+  <div id="modal-crear" style="display: none;">
+    <div id="modal-crear-content">
+      
+      <h2>Nueva tarea</h2>
+      <input type="text" id="titulo-tarea" placeholder="Título de la tarea">
+      <textarea id="detalle-tarea" placeholder="Detalle de la tarea"></textarea>
+      <select id="estado-tarea">
+        <option value="por hacer">Por hacer</option>
+        <option value="nueva">Nueva</option>
+      </select>
+      <div class="botones">
+        <button id="guardar-tarea">Guardar</button>
+        <button id="cancelar-tarea">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  <div id="publicaciones-container">
+    
+  </div>
+
+<!-- Modal Configuración -->
+<div id="modal-configuracion" style="display: none;">
+  <div id="modal-configuracion-content">
+    <span id="close-configuracion-modal">&times;</span>
+    <h2>Configuración</h2>
+    <label for="select-idioma">Seleccionar idioma</label>
+    <select id="select-idioma">
+      <option value="es-ES">España - es-ES</option>
+      <option value="es-MX">México - es-MX</option>
+      <option value="en-US">Inglés - en-US</option>
+      <option value="fr-FR">Francés - fr-FR</option>
+      <option value="de-DE">Alemán - de-DE</option>
+    </select>
+    <label for="rate-velocidad">Velocidad de audio</label>
+    <input type="range" id="rate-velocidad" min="0" max="2" step="0.05" value="1">
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" style="display: none;">
+  <div id="modal-content">
+    <h1>Cambiar estado</h1>
+    <h2 id="modal-title" style="text-align: center;"></h2>
+    <p id="modal-description" style="text-align: center; margin-top: 10px;"></p>
+    <p id="modal-date" style="text-align: center; margin-top: 10px; color: #555;"></p>
+    <div style="text-align: center; margin-top: 20px;">
+      <select id="modal-select" style="padding: 5px; border-radius: 5px;">
+        <option value="por hacer">Por hacer</option>
+        <option value="completada">Completada</option>
+      </select>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+      <button id="modal-save" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Guardar</button>
+      <button id="modal-cancel" style="padding: 10px 20px; background-color: #f44336; color: white; border: none; border-radius: 5px;">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
